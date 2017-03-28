@@ -195,9 +195,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EfCoreAsyncUnitOfWork.cs" />
     <Compile Include="EfCoreDatabaseFactoryBase.cs" />
     <Compile Include="DatabaseFactoryBase.cs" />
     <Compile Include="Disposable.cs" />
+    <Compile Include="EFCoreAsyncRepositoryBase.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EFCoreRepositoryBase.cs" />
     <Compile Include="RepositoryBase.cs" />

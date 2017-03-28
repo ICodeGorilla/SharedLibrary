@@ -138,8 +138,8 @@
       <HintPath>..\packages\NLog.Targets.Syslog.2.1.5893.18660\lib\net45\NLog.Targets.Syslog.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
@@ -269,6 +269,7 @@
     <Compile Include="Database\EFCore\EfCoreAccountRepository.cs" />
     <Compile Include="Database\EFCore\CompositeKeyTest.cs" />
     <Compile Include="Database\EFCore\Contact.cs" />
+    <Compile Include="Database\EFCore\EfCoreAsyncAccountRepository.cs" />
     <Compile Include="Database\EFCore\MigrationHistory.cs" />
     <Compile Include="Database\EFCore\SharedLibraryContext.cs" />
     <Compile Include="Database\SharedCommonDatabaseContext.cs" />
@@ -283,6 +284,7 @@
     <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="Helper\LoggerTestHelper.cs" />
     <Compile Include="Tests\DatabaseFactoryTest.cs" />
+    <Compile Include="Tests\EfCoreRepositoryAsyncTests.cs" />
     <Compile Include="Tests\ODataContactTests.cs" />
     <Compile Include="Tests\ODataCompositeIntegrationTests.cs" />
     <Compile Include="Tests\ODataIntegrationTests.cs" />

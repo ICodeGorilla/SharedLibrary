@@ -24,6 +24,7 @@ namespace Tests.Database.EFCore
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=WIN-DTLAIS5TR8U\LOCALHOST;Integrated Security=True;Initial Catalog=SharedLibrary;MultipleActiveResultSets=True;App=EntityFramework");
+            //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFProviders.InMemory;Trusted_Connection=True;");
             optionsBuilder.ConfigureWarnings(x => x.Ignore(RelationalEventId.AmbientTransactionWarning));
         }
 

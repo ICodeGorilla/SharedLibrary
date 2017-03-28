@@ -191,6 +191,7 @@
   <ItemGroup>
     <Compile Include="IEFCoreDatabaseFactory.cs" />
     <Compile Include="IDatabaseFactory.cs" />
+    <Compile Include="IAsyncRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

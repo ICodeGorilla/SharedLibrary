@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using Shared.Repository.Contract;
+﻿using Shared.Repository.Contract;
 
 namespace Shared.Repository
 {
