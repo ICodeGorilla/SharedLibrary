@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Repository.Contract"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TestingDatabase", "TestingDatabase\TestingDatabase.sqlproj", "{0716C5E9-B9B4-4C87-A29C-C23C809C5A8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseEngineerDatabase", "ReverseEngineerDatabase\ReverseEngineerDatabase.csproj", "{E2C524F1-D87B-46B9-A303-E89D2CD4BD1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{0716C5E9-B9B4-4C87-A29C-C23C809C5A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0716C5E9-B9B4-4C87-A29C-C23C809C5A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0716C5E9-B9B4-4C87-A29C-C23C809C5A8C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E2C524F1-D87B-46B9-A303-E89D2CD4BD1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C524F1-D87B-46B9-A303-E89D2CD4BD1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C524F1-D87B-46B9-A303-E89D2CD4BD1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C524F1-D87B-46B9-A303-E89D2CD4BD1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,5 +98,6 @@ Global
 		{BF2FD48B-16DC-4075-9B95-BB6DAE84937C} = {EB970FCE-589B-4F9F-AAE6-556B0F79AFA2}
 		{799A32CF-7529-4F1E-8B24-5A88150A2411} = {C48E7CF9-845C-48CF-93CC-0E29D5003B73}
 		{DAE3EC28-B9ED-4EB5-95A5-33D2F8807B2E} = {C48E7CF9-845C-48CF-93CC-0E29D5003B73}
+		{E2C524F1-D87B-46B9-A303-E89D2CD4BD1C} = {C48E7CF9-845C-48CF-93CC-0E29D5003B73}
 	EndGlobalSection
 EndGlobal
