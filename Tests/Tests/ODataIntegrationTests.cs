@@ -74,7 +74,7 @@ namespace Tests.Tests
         {
             var request = GetTestAccount();
             var createTestItemResponse = GetController().Post(request);
-            return APIControllerTestHelper.GetContent<Account>(createTestItemResponse);
+            return ApiControllerTestHelper.GetContentAsync<Account>(createTestItemResponse);
         }
 
         //Given:  I have a Account id that does not exist
@@ -126,7 +126,7 @@ namespace Tests.Tests
             var response = GetController().Post(testItem);
 
             //Then
-            var updatedItem = APIControllerTestHelper.GetContent<Account>(response);
+            var updatedItem = ApiControllerTestHelper.GetContentAsync<Account>(response);
             EqualityHelper.PropertyValuesAreEqual(updatedItem, testItem);
         }
 

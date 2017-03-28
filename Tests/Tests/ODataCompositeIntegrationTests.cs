@@ -74,7 +74,7 @@ namespace Tests.Tests
         {
             var request = GetTestObject();
             var createTestItemResponse = GetController().Post(request);
-            return APIControllerTestHelper.GetContent<CompositeKeyTest>(createTestItemResponse);
+            return ApiControllerTestHelper.GetContentAsync<CompositeKeyTest>(createTestItemResponse);
         }
 
         //Given:  I have a CompositeKeyTest id that does not exist
@@ -124,7 +124,7 @@ namespace Tests.Tests
             var response = GetController().Post(testItem);
 
             //Then
-            var updatedItem = APIControllerTestHelper.GetContent<CompositeKeyTest>(response);
+            var updatedItem = ApiControllerTestHelper.GetContentAsync<CompositeKeyTest>(response);
             EqualityHelper.PropertyValuesAreEqual(updatedItem, testItem);
         }
 

@@ -9,41 +9,41 @@ using Autofac;
 
 namespace Shared.Helper.Test
 {
-    public static class APIControllerTestHelper
+    public static class ApiControllerTestHelper
     {
-        public static async Task<T> GetContent<T>(HttpResponseMessage message)
+        public static async Task<T> GetContentAsync<T>(HttpResponseMessage message)
         {
-            var data = await message.Content.ReadAsStringAsync();
+            var data = await message.Content.ReadAsStringAsync().ConfigureAwait(true);
             var jSserializer = new JavaScriptSerializer();
             return jSserializer.Deserialize<T>(data);
         }
 
-        public static async Task<List<T>> GetContentList<T>(HttpResponseMessage message)
+        public static async Task<List<T>> GetContentListAsync<T>(HttpResponseMessage message)
         {
-            var data = await message.Content.ReadAsStringAsync();
+            var data = await message.Content.ReadAsStringAsync().ConfigureAwait(true);
             var jSserializer = new JavaScriptSerializer();
             return jSserializer.Deserialize<List<T>>(data);
         }
 
         public static List<T> GetAwaitedContentList<T>(HttpResponseMessage message)
         {
-            var task = GetContentList<T>(message);
+            var task = GetContentListAsync<T>(message);
             return Task.WhenAll(task).Result.First();
         }
 
         public static T GetAwaitedContent<T>(HttpResponseMessage message)
         {
-            var task = GetContent<T>(message);
+            var task = GetContentAsync<T>(message);
             return Task.WhenAll(task).Result.First();
         }
 
-        public static T GetContent<T>(IHttpActionResult createTestItemResponse)
+        public static T GetContentAsync<T>(System.Web.Http.IHttpActionResult createTestItemResponse)
         {
             var testItemContent = (System.Web.OData.Results.CreatedODataResult<T>)createTestItemResponse;
             return testItemContent.Entity;
         }
 
-        public static List<T> GetContentList<T>(IHttpActionResult createTestItemResponse)
+        public static List<T> GetContentListAsync<T>(System.Web.Http.IHttpActionResult createTestItemResponse)
         {
             var testItemContent = (System.Web.OData.Results.CreatedODataResult<List<T>>)createTestItemResponse;
             return testItemContent.Entity;
@@ -56,6 +56,17 @@ namespace Shared.Helper.Test
             controller.Request = new HttpRequestMessage();
             controller.Request.Properties.Add(HttpPropertyKeys.HttpConfigurationKey, new HttpConfiguration());
             return controller;
+        }
+
+        
+        public static T GetAwaitedContent<T>(System.Web.Http.IHttpActionResult message)
+        {
+            return GetAwaitedContent<T>(message.GetHttpResponseMessage());
+        }
+
+        public static List<T> GetAwaitedContentList<T>(System.Web.Http.IHttpActionResult message)
+        {
+            return GetAwaitedContentList<T>(message.GetHttpResponseMessage());
         }
     }
 }
