@@ -1,5 +1,5 @@
 # SharedLibrary
-.Net 4.6.1 share library that I use in almost every project.
+.Net 4.6.1 shared library that I use in almost every project.
 <strong>Some code could be found in other projects, taken from everywhere, modified or written myself.  </strong>
 
 It is fully tested and helps me get up and running quickly. I have moved it recently from bitbucket to Git.  I try to update it 
